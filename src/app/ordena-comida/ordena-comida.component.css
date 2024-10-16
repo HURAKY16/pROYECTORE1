@@ -1,0 +1,33 @@
+:host {
+    display: block;
+    min-height: 100vh; /* Mantiene el contenedor cubriendo toda la altura de la ventana */
+    background-image: url('https://wallpapers.com/images/hd/1920x1080-kitchen-background-1920-x-1080-vq23fv9d88yqfx06.jpg');
+    background-size: 1920px 1080px; /* Establece el tamaño de la imagen de fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Cambia el color del texto si es necesario para mejorar la legibilidad */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.menu-options {
+    margin-top: 15px;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.btn-customize {
+    margin-right: 10px;
+}
+
+ul.list-group {
+    margin-bottom: 20px;
+}

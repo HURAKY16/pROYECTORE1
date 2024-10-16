@@ -1,0 +1,85 @@
+<div class="container mt-5">
+    <h2 class="text-center text-black">Ordena tu Comida</h2>
+
+    <!-- Dropdown para elegir tipo de comida -->
+    <div class="text-center mt-4">
+        <label for="foodType" class="text-black">
+            <h4>Selecciona el tipo de comida:</h4>
+        </label>
+        <select id="foodType" class="form-select w-50 mx-auto" [(ngModel)]="selectedFoodType">
+            <option value="" selected disabled>-- Seleccionar --</option>
+            <option value="americana">Cocina Americana</option>
+            <option value="mexicana">Cocina Mexicana</option>
+            <option value="asiatica">Cocina Asiática</option>
+        </select>
+    </div>
+
+    <!-- Opciones de comida -->
+    <div class="menu-options mt-5" *ngIf="selectedFoodType">
+        <!-- Cocina Americana -->
+        <div *ngIf="selectedFoodType === 'americana'">
+            <h4 class="text-white">Cocina Americana</h4>
+            <ul class="list-group">
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Hamburguesa Clásica
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Hamburguesa Con Tocino
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Hamburguesa Doble Carne
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Perros Calientes
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cocina Mexicana -->
+        <div *ngIf="selectedFoodType === 'mexicana'">
+            <h4 class="text-white">Cocina Mexicana</h4>
+            <ul class="list-group">
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Tacos
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Burritos
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Enchiladas
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cocina Asiática -->
+        <div *ngIf="selectedFoodType === 'asiatica'">
+            <h4 class="text-white">Cocina Asiática</h4>
+            <ul class="list-group">
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Sushi
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Fideos
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+                <li class="list-group-item menu-item d-flex justify-content-between align-items-center">
+                    Dim Sum
+                    <button class="btn btn-sm btn-primary">Personalizar</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botón para ordenar -->
+    <div class="text-center mt-5">
+        <button class="btn btn-success" (click)="ordenar()">Ordenar</button>
+    </div>
+</div>

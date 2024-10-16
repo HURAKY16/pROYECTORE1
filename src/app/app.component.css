@@ -1,0 +1,23 @@
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.menu-options {
+    margin-top: 15px;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.btn-customize {
+    margin-right: 10px;
+}
+
+ul.list-group {
+    margin-bottom: 20px;
+}
